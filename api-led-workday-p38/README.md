@@ -1,6 +1,6 @@
 # API-led connectivity migration — Workday Contingent Worker to P38
 
-This directory contains two Mule 4 applications. Flow names follow the supplied TIBCO event-handler names.
+This directory contains one Mule 4 System API. Flow names follow the supplied TIBCO event-handler names.
 
 ```text
 Workday file directory
@@ -17,8 +17,8 @@ Workday file directory
   → P38 SAP EventHandler.process → Create File
 ```
 
-The Process API contains only `ContingentWorker/processFile.process` mapping/orchestration. The System API owns all filesystem, JMS, HUB/Oracle, and CHRIS filesystem connectivity.
+`ContingentWorker/processFile.process` is a local subflow without a listener. The System API owns all filesystem, JMS, HUB/Oracle, and CHRIS filesystem connectivity.
 
-Deploy the System API first and then the Process API. Set hostnames, ports, TLS, credentials, and deployment properties for each environment. The TIBCO export does not contain resolved deployment values, so defaults remain placeholders.
+Set JMS, database, directory, and deployment properties for the System API. The TIBCO export does not contain resolved deployment values, so defaults remain placeholders.
 
 The original single-application migration remains under `../mulesoft-workday-p38-contingent-worker` as a traceable reference implementation.

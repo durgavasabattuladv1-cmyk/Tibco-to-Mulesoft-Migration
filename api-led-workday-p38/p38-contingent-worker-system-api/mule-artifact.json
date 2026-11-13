@@ -1,1 +1,1 @@
-{"minMuleVersion":"4.6.8","javaSpecificationVersions":["17"],"configs":["p38-contingent-worker-system-api.xml"]}
+{"minMuleVersion":"4.6.8","javaSpecificationVersions":["17"],"configs":["p38-contingent-worker-system-api.xml"],"sharedLibraries":["com.oracle.database.jdbc:ojdbc11:23.4.0.24.05"]}
