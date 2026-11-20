@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://iip.roche.com/schemas/HRSystem/Workday/ContingentWorkerEvent"
+	 xmlns:ns="http://iip.roche.com/schemas/HRSystem/Workday/ContingentWorkerEventTypes"
+	 targetNamespace="http://iip.roche.com/schemas/HRSystem/Workday/ContingentWorkerEvent"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://iip.roche.com/schemas/HRSystem/Workday/ContingentWorkerEventTypes" schemaLocation="Workday_ContingentWorker_TDF.xsd"/>
+	<xs:complexType name="Contact_Data_Type">
+		<xs:sequence>
+			<xs:element name="Legal_Last_Name" type="xs:string"/>
+			<xs:element name="Local_Last_Name" type="xs:string" minOccurs="0"/>
+			<xs:element name="User_Name" type="xs:string" minOccurs="0"/>
+			<xs:element name="Preferred_Last_Name" type="xs:string" minOccurs="0"/>
+			<xs:element name="Legal_First_Name" type="xs:string"/>
+			<xs:element name="Local_First_Name" type="xs:string" minOccurs="0"/>
+			<xs:element name="Preferred_First_Name" type="xs:string" minOccurs="0"/>
+			<xs:element name="Legal_Name_Country" type="xs:string"/>
+			<xs:element name="Suffix" type="xs:string" minOccurs="0"/>
+			<xs:element name="Work_Email" type="xs:string" minOccurs="0"/>
+			<xs:element name="Prefix" type="xs:string" minOccurs="0"/>
+			<xs:element name="Salutation" type="xs:string" minOccurs="0"/>
+			<xs:element name="Hire_Date" type="xs:date" minOccurs="0"/>
+			<xs:element name="Terminate_Date" type="xs:string" minOccurs="0"/>
+			<xs:element name="Last_Date_Worked" type="xs:string" minOccurs="0"/>
+			<xs:element name="Contingent_Worker_Type" type="xs:string" minOccurs="0"/>
+			<xs:element name="Employee_Group" type="xs:string" minOccurs="0"/>
+			<xs:element name="Employee_Subgroup" type="xs:string" minOccurs="0"/>
+			<xs:element name="Personnel_Area" type="xs:string" minOccurs="0"/>
+			<xs:element name="Personnel_Subarea" type="xs:string" minOccurs="0"/>
+			<xs:element name="Action" type="xs:string" minOccurs="0"/>
+			<xs:element name="Private_Email" type="xs:string" minOccurs="0"/>
+			<xs:element name="Language" type="xs:string" minOccurs="0"/>
+			<xs:element name="Working_City" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Biographic_Data_Type">
+		<xs:sequence>
+			<xs:element name="Birth_Date" type="xs:date" minOccurs="0"/>
+			<xs:element name="Gender" type="xs:string" minOccurs="0"/>
+			<xs:element name="Nationality" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Additional_Data_Type">
+		<xs:sequence>
+			<xs:element name="Building" type="xs:string" minOccurs="0"/>
+			<xs:element name="Room" type="xs:string" minOccurs="0"/>
+			<xs:element name="Workstation" type="xs:string" minOccurs="0"/>
+			<xs:element name="Terminal" type="xs:string" minOccurs="0"/>
+			<xs:element name="Floor" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Contingent_Worker_Data_Type">
+		<xs:sequence>
+			<xs:element name="Supplier_ID" type="xs:string" minOccurs="0"/>
+			<xs:element name="Business_Critical" type="xs:string" minOccurs="0"/>
+			<xs:element name="Effective_Date" type="xs:date" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Phone_Data_Type">
+		<xs:sequence>
+			<xs:element name="Phone_Number" type="xs:string"/>
+			<xs:element name="Alternate_Phone" type="xs:string" minOccurs="0"/>
+			<xs:element name="Fax_Number" type="xs:string" minOccurs="0"/>
+			<xs:element name="Mobile_Phone" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Custom_ID_Type">
+		<xs:sequence>
+			<xs:element name="ID" type="xs:string"/>
+			<xs:element name="Type" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Organization_Unit_Type">
+		<xs:sequence>
+			<xs:element name="Organization_ID" type="xs:string" minOccurs="0"/>
+			<xs:element name="Organization_Name" type="xs:string" minOccurs="0"/>
+			<xs:element name="Code" type="xs:string" minOccurs="0"/>
+			<xs:element name="Organization_Manager" type="xs:string" minOccurs="0"/>
+			<xs:element name="CHRIS_Organization_ID" type="xs:string" minOccurs="0"/>
+			<xs:element name="Job_Staffing_Model_Flag" type="xs:string" minOccurs="0"/>
+			<xs:element name="Person_Responsible" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Position_Data_Type">
+		<xs:sequence>
+			<xs:element name="Position_ID" type="xs:string" minOccurs="0"/>
+			<xs:element name="Location_ID" type="xs:string" minOccurs="0"/>
+			<xs:element name="Cost_Center_Code" type="xs:string" minOccurs="0"/>
+			<xs:element name="Cost_Center_ODG_Code" type="xs:string" minOccurs="0"/>
+			<xs:element name="Company_Code" type="xs:string"/>
+			<xs:element name="FTE" type="xs:string" minOccurs="0"/>
+			<xs:element name="Job_Position_Title" type="xs:string" minOccurs="0"/>
+			<xs:element name="Job_Code" type="xs:string" minOccurs="0"/>
+			<xs:element name="Time_Type" type="xs:string" minOccurs="0"/>
+			<xs:element name="Contract_Type" type="xs:string" minOccurs="0"/>
+			<xs:element name="Expected_End_Date" type="xs:date" minOccurs="0"/>
+			<xs:element name="Organization_Unit" type="Organization_Unit_Type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="List_Of_Custom_IDs_Type">
+		<xs:sequence>
+			<xs:element name="Custom_ID" type="Custom_ID_Type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Contingent_Worker_Event_Type">
+		<xs:sequence>
+			<xs:element name="Contact_Data" type="Contact_Data_Type"/>
+			<xs:element name="List_Of_Custom_IDs" type="List_Of_Custom_IDs_Type" minOccurs="0"/>
+			<xs:element name="Phone_Data" type="Phone_Data_Type" minOccurs="0"/>
+			<xs:element name="Contingent_Worker_Data" type="Contingent_Worker_Data_Type" minOccurs="0"/>
+			<xs:element name="Additional_Data" type="Additional_Data_Type" minOccurs="0"/>
+			<xs:element name="Biographic_Data" type="Biographic_Data_Type" minOccurs="0"/>
+			<xs:element name="Position_Data" type="Position_Data_Type" minOccurs="0"/>
+			<xs:element name="Event_Name" type="xs:string" minOccurs="0"/>
+			<xs:element name="Event_Date" type="xs:dateTime" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Worker_Type">
+		<xs:sequence>
+			<xs:element name="Employee_ID" type="xs:string" minOccurs="0"/>
+			<xs:element name="Contingent_Worker_Event" type="Contingent_Worker_Event_Type" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Contingent_Worker_Events">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Worker" type="Worker_Type" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Contingent_Worker_Event" type="Contingent_Worker_Event_Type"/>
+</xs:schema>
